@@ -18,3 +18,11 @@ I am not using --rebase because from my understanding, rebase will get the chang
 Question 2: Which one of these two methods is right? What is the difference there?
 
 The goal in all of this is to keep my test branch updated with the things happening in master and later I could merge them back into master hoping to keep the timeline as linear as possible.
+------------------------------------
+How I would do this
+
+git checkout master
+git pull origin master
+git merge test
+git push origin master
+If I have a local branch from a remote one, I don't feel comfortable with merging other branches than this one with the remote. Also I would not push my changes, until I'm happy with what I want to push and also I wouldn't push things at all, that are only for me and my local repository. In your description it seems, that test is only for you? So no reason to publish it.
