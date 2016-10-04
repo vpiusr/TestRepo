@@ -1,0 +1,20 @@
+My work on test is done and I am ready to merge it back to master. Here are the two ways I can think of:
+
+A:
+
+git checkout test
+git pull origin master
+git push origin test
+git checkout master
+git pull origin test 
+B:
+
+git checkout test
+git pull origin master
+git checkout master
+git merge test
+I am not using --rebase because from my understanding, rebase will get the changes from master and stack mine on top of that hence it could overwrite changes other people made.
+
+Question 2: Which one of these two methods is right? What is the difference there?
+
+The goal in all of this is to keep my test branch updated with the things happening in master and later I could merge them back into master hoping to keep the timeline as linear as possible.
